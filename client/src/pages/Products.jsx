@@ -19,7 +19,7 @@ const Products = () => {
         setLoading(true);
         const response = await productApi.getAll(currentPage, 8, category);
         setProducts(response.data.products);
-        setTotalPages(response.data.totalPages);
+        setTotalPages(response.data.pagination.totalPages);
         setLoading(false);
       } catch (err) {
         console.error('Error fetching products:', err);
