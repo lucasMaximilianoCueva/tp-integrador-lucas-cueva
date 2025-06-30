@@ -41,6 +41,17 @@
                   <i class="bi bi-box-arrow-in-right me-2"></i>Login
                 </button>
               </div>
+              
+              <div class="text-center mt-3">
+                <button 
+                  type="button" 
+                  class="btn btn-sm btn-link"
+                  onclick="fillTestCredentials()"
+                >
+                  <i class="bi bi-lightning-fill me-1"></i>
+                  Quick Access (Test Credentials)
+                </button>
+              </div>
             </form>
             
             <div class="text-center mt-4">
@@ -60,5 +71,11 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function fillTestCredentials() {
+      document.getElementById('email').value = 'admin@example.com';
+      document.getElementById('password').value = 'admin123';
+    }
+  </script>
 </body>
 </html>
