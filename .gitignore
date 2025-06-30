@@ -1,0 +1,46 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.env
+.env.*.local
+*.local
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Vite
+dist/
+.vite/
+
+# React/Vite cache
+.cache/
+vite.config.ts
+vite.config.js
+
+# Editor/directorio específicos
+.DS_Store
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# Optional: testing
+coverage/
+*.lcov
+
+# Optional: PM2 logs or other process managers
+pids/
+*.pid
+*.seed
+
+# Optional: builds
+build/
