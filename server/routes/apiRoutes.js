@@ -22,8 +22,8 @@ router.delete('/products/:id', isAuthenticated, isAdmin, productController.delet
 
 // Sale routes
 router.post('/sales', saleController.createSale);
-router.get('/sales', isAuthenticated, isAdmin, saleController.getAllSales);
-router.get('/sales/:id', isAuthenticated, isAdmin, saleController.getSaleById);
+// router.get('/sales', isAuthenticated, isAdmin, saleController.getAllSales);
+// router.get('/sales/:id', isAuthenticated, isAdmin, saleController.getSaleById);
 
 
 

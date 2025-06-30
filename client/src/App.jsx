@@ -9,7 +9,6 @@ import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import Cart from './pages/Cart';
 import Ticket from './pages/Ticket';
-import AdminLogin from './pages/AdminLogin';
 import './assets/css/styles.css';
 
 function App() {
@@ -67,7 +66,6 @@ function App() {
                   element={customerName ? <Ticket customerName={customerName} /> : <Navigate to="/" />} 
                 />
 
-                <Route path="/admin" element={<AdminLogin />} />
                 <Route path="*" element={<Navigate to="/" />} />
               </Routes>
             </main>

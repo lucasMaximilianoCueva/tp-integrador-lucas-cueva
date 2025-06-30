@@ -43,6 +43,16 @@ const Header = ({ customerName }) => {
               <i className={`bi ${darkMode ? 'bi-sun' : 'bi-moon'}`}></i>
             </button>
             
+            <a 
+              href="http://localhost:3000/admin/login" 
+              className="btn btn-outline-secondary ms-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="bi bi-shield-lock me-1"></i>
+              Admin
+            </a>
+            
             {customerName && (
               <div className="ms-3 d-none d-sm-block">
                 <span className={`${darkMode ? 'text-light' : 'text-muted'} me-2`}>Welcome,</span>
