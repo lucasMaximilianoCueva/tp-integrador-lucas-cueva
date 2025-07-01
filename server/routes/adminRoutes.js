@@ -21,8 +21,6 @@ router.use((req, res, next) => {
   isAuthenticated(req, res, next);
 });
 
-
-
 // Dashboard page
 router.get('/dashboard', isAdmin, async (req, res) => {
   try {
@@ -72,14 +70,6 @@ router.get('/products/edit/:id', isAdmin, async (req, res) => {
     res.status(500).render('error', { message: 'Server error', error });
   }
 });
-
-
-
-
-
-
-
-
 
 // Process create product form
 router.post('/products/create', isAdmin, uploadProductImage, async (req, res) => {

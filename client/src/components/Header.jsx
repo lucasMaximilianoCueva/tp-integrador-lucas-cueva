@@ -11,9 +11,6 @@ const Header = ({ customerName }) => {
   // Don't show navigation on welcome page
   const isWelcomePage = location.pathname === '/' && !customerName;
   
-  // Don't show cart on survey page (end of flow)
-  const isSurveyPage = location.pathname === '/survey';
-  
   return (
     <header className={`navbar navbar-expand-lg ${darkMode ? 'navbar-dark bg-dark' : 'navbar-light bg-light'} shadow-sm`}>
       <div className="container">
@@ -24,7 +21,7 @@ const Header = ({ customerName }) => {
         
         {!isWelcomePage && (
           <div className="d-flex align-items-center ms-auto">
-            {customerName && !isSurveyPage && (
+            {customerName && (
               <Link to="/cart" className="btn btn-outline-primary position-relative me-3">
                 <i className="bi bi-cart"></i>
                 {itemCount > 0 && (

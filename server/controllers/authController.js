@@ -68,7 +68,9 @@ exports.login = async (req, res) => {
     };
     
     // Check if request is from API or form
-    const isApiRequest = req.xhr || req.headers.accept.indexOf('json') > -1;
+    const isApiRequest = req.xhr || 
+                        req.headers['content-type']?.includes('application/json') || 
+                        req.headers.accept?.includes('application/json');
     
     if (isApiRequest) {
       // Return JSON for API requests
