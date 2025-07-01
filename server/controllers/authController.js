@@ -101,7 +101,9 @@ exports.logout = (req, res) => {
     res.clearCookie('connect.sid');
     
     // Check if request is AJAX/API call or form submission
-    const isApiRequest = req.xhr || req.headers.accept?.includes('application/json');
+    const isApiRequest = req.xhr || 
+                        req.headers['content-type']?.includes('application/json') || 
+                        req.headers.accept?.includes('application/json');
     
     if (isApiRequest) {
       // If API request, return JSON response
